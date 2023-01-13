@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const NewsItemBlock = styled.div`
+const StNewsItemBlock = styled.div`
   display:flex;
   .thumbnail {
     margin-right: 1rem;
@@ -35,7 +35,7 @@ const NewsItem = ({ article }) => {
   const { title, description, url, urlToImage } = article;
 
   return (
-    <NewsItemBlock>
+    <StNewsItemBlock>
       {urlToImage && (
         <div className='thumbnail'>
           <a href={url} target="_blank" rel="noopener noreferrer">
@@ -51,7 +51,7 @@ const NewsItem = ({ article }) => {
         </h2>
         <p>{description}</p>
       </div>
-    </NewsItemBlock>
+    </StNewsItemBlock>
   );
 };
 
